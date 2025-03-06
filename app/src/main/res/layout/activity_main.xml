@@ -1,16 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg4">
-
-    <GridLayout
-        android:id="@+id/imageContainer"
-        android:layout_width="match_parent"
+    android:background="@drawable/bg4"
+    tools:context=".MainActivity">
+    <!-- Текстовая ссылка "Назад" -->
+    <TextView
+        android:id="@+id/textBack"
+        android:layout_width="409dp"
         android:layout_height="wrap_content"
-        android:alignmentMode="alignBounds"
-        android:columnCount="2"
-        android:columnOrderPreserved="false"
-        android:padding="4dp"
-        android:rowCount="0" />
-</ScrollView>
+        android:layout_marginTop="16dp"
+        android:onClick="onBackClick"
+        android:text="← Назад"
+        android:textAlignment="textEnd"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textBack"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <GridLayout
+            android:id="@+id/imageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alignmentMode="alignBounds"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:padding="4dp"
+            android:rowCount="0" />
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

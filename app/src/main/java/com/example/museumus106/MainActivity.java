@@ -25,11 +25,21 @@ public class MainActivity extends AppCompatActivity {
 
         imageContainer = findViewById(R.id.imageContainer);
 
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         // Загрузка ресурсов
         loadResources();
 
         // Создание ImageView и добавление их в контейнер
         createImageViews();
+    }
+
+    // Обработчик нажатия на текстовую ссылку "← Назад"
+    public void onBackClick(View view) {
+        // Переход на MenuActivity
+        Intent intent = new Intent(this, MenuActivity.class);
+        startActivity(intent);
+        finish(); // Закрываем текущую активность (опционально)
     }
 
     private void loadResources() {
