@@ -66,10 +66,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void createImageViews() {
         int screenWidth = getScreenWidth();
-        int imageSize = (screenWidth - dpToPx(16)) / 3; // Размер ImageView с учётом отступов
+        int imageSize = (screenWidth - dpToPx(16)) / 2; // Размер ImageView с учётом отступов
 
         int totalImages = imageResources.size();
-        int rows = (int) Math.ceil(totalImages / 3.0); // Рассчитываем количество строк
+        int rows = (int) Math.ceil(totalImages / 2.0); // Рассчитываем количество строк
 
         // Устанавливаем количество строк в GridLayout
         imageContainer.setRowCount(rows);
@@ -95,9 +95,9 @@ public class MainActivity extends AppCompatActivity {
 
             imageContainer.addView(imageView);
 
-            // Переход на следующую строку после 3 столбцов
+            // Переход на следующую строку после 2 столбцов
             col++;
-            if (col >= 3) {
+            if (col >= 2) {
                 col = 0;
                 row++;
             }
