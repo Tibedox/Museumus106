@@ -17,11 +17,13 @@ public class MenuActivity extends AppCompatActivity {
     public void onExhibitsClick(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
 
     // Обработчик нажатия на "О МУЗЕЕ"
     public void onAboutClick(View view) {
         Intent intent = new Intent(this, AboutActivity.class);
         startActivity(intent);
+        finish();
     }
 }
