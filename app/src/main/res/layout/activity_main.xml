@@ -7,35 +7,16 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg4"
     tools:context=".MainActivity">
-    <!-- Текстовая ссылка "Назад" -->
-    <TextView
-        android:id="@+id/textBack"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="690dp"
-        android:onClick="onBackClick"
-        android:text="← Назад"
-        android:textAlignment="textEnd"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="64dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textBack"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
-
 
         <GridLayout
             android:id="@+id/imageContainer"
@@ -47,4 +28,14 @@
             android:padding="4dp"
             android:rowCount="0" />
     </ScrollView>
+    <!-- Текстовая ссылка "Назад" -->
+    <Button
+        android:id="@+id/floatingButton"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:onClick="onBackClick"
+        android:text="←"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
